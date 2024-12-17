@@ -1,0 +1,40 @@
+   jTextCodgo_ClientesetText(tabelaClientes.getValueAt(selectedRow, 0).toString());
+        jFormattRGsetText(tabelaClientes.getValueAt(selectedRow, 1).toString());
+        jFormattCPF.setText(tabelaClientes.getValueAt(selectedRow, 2).toString());
+
+        jTextEmailClie.setText(tabelaClientes.getValueAt(selectedRow, 3).toString());
+        jFormattTelefone.setText(tabelaClientes.getValueAt(selectedRow, 4).toString());
+        jFormatCelular.setText(tabelaClientes.getValueAt(selectedRow, 5).toString());
+
+        jForCEP.setText(tabelaClientes.getValueAt(selectedRow, 6).toString());
+        jTextEndereco.setText(tabelaClientes.getValueAt(selectedRow, 7).toString());
+        jTextNumero.setText(tabelaClientes.getValueAt(selectedRow,8).toString());
+        
+        jTextComplemento.setText(tabelaClientes.getValueAt(selectedRow, 9).toString());
+        jTextBairro.setText(tabelaClientes.getValueAt(selectedRow, 10).toString());
+        jTextCidade.setText(tabelaClientes.getValueAt(selectedRow, 11).toString());
+        
+        jTextCodgo_Cliente.setText(tabelaClientes.getValueAt(selectedRow, 12).toString());
+       jComboUF(tabelaClientes.getValueAt(selectedRow, 13).toString());
+
+   
+    }
+
+
+    int linhaSelecionada = tabelaClientes.getSelectedRow();
+if (linhaSelecionada != -1) {
+    jTextCodgo_Clientes.setText(tabelaClientes.getValueAt(linhaSelecionada, 0).toString());
+    jFormattRG.setText(tabelaClientes.getValueAt(linhaSelecionada, 1).toString());
+    jFormattCPF.setText(tabelaClientes.getValueAt(linhaSelecionada, 2).toString());
+    jTextEmailClie.setText(tabelaClientes.getValueAt(linhaSelecionada, 3).toString());
+    jFormattTelefone.setText(tabelaClientes.getValueAt(linhaSelecionada, 4).toString());
+    jFormatCelular.setText(tabelaClientes.getValueAt(linhaSelecionada, 5).toString());
+    jForCEP.setText(tabelaClientes.getValueAt(linhaSelecionada, 6).toString());
+    jTextEndereco.setText(tabelaClientes.getValueAt(linhaSelecionada, 7).toString());
+    jTextNumero.setText(tabelaClientes.getValueAt(linhaSelecionada, 8).toString());
+    jTextComplemento.setText(tabelaClientes.getValueAt(linhaSelecionada, 9).toString());
+    jTextBairro.setText(tabelaClientes.getValueAt(linhaSelecionada, 10).toString());
+    jTextCidade.setText(tabelaClientes.getValueAt(linhaSelecionada, 11).toString());
+    jTextCodgo_Clientes.setText(tabelaClientes.getValueAt(linhaSelecionada, 12).toString());
+    jComboUF(tabelaClientes.getValueAt(linhaSelecionada, 13).toString());
+}

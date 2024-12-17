@@ -1,0 +1,20 @@
+import javax.swing.JFrame;
+
+public class Main {
+    public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Frmclientes().setVisible(true);
+            }
+        });
+    }
+}
+
+class Frmclientes extends JFrame {
+    public Frmclientes() {
+        setTitle("Clientes");
+        setSize(400, 300); // Defina o tamanho da janela
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // Centraliza a janela
+    }
+}

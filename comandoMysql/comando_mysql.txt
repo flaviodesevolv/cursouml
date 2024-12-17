@@ -1,0 +1,19 @@
+create = criar
+table= tabela
+
+
+
+databeses = banco de dados
+varchar= usa carecterees
+
+use = usa 
+key primary = usa unico id/nome !!!!
+
+select = celesiona 
+* = vario ou todo 
+from  = der 
+ add = adicionar 
+column = colona 
+
+into = na 
+values = valor ou aulguo.

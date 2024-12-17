@@ -1,0 +1,741 @@
+ CREATE DATABASE BDVENDAS;
+CREATE USER ' USUARIOCURSO'@'%' IDENTIFIED BY '123';
+GRANT ALL ON *.* TO' usuariocurso'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+USE BDVENDAS;
+
+CREATE TABLE TB_CLIENTE(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+CREATE TABLE TB_fornecedor(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+cnpj varchar(100),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+CREATE TABLE TB_funcionario(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+senha varchar(10),
+cargo varchar(100),
+nivel_acesso varchar(50),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+create table tb_produtos (
+id int auto_increment primary key,
+descricao varchar(100),
+preco decimal (10,2),
+qtd_estoque int,
+for_id int,
+foreign key(for_id) references tb_fornecedores(id));
+
+create table tb_intensvendas(
+id int auto_increment primary key,
+venda_id int,
+prudoto_id int ,
+qtd int,
+subtotal decimal(10,0),
+ foreign key (venda_id) references tb_vendas(id),
+  foreign key (produto_id) references tb_podutos(id));
+  
+
+
+
+
+
+
+
+
+
+
+
+create table tb_vendas(
+id int auto_increment primary key,
+cliente_id int ,
+data_vendas datetime,
+total_vendas decimal(10,0),
+observacao text,
+foreign key (cliente_id)references tb_clientes(id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE DATABASE BDVENDAS;
+CREATE USER ' USUARIOCURSO'@'%' IDENTIFIED BY '123';
+GRANT ALL ON *.* TO' usuariocurso'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+USE BDVENDAS;
+
+CREATE TABLE TB_CLIENTE(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+CREATE TABLE TB_fornecedor(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+cnpj varchar(100),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+CREATE TABLE TB_funcionario(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+senha varchar(10),
+cargo varchar(100),
+nivel_acesso varchar(50),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+create table tb_produtos (
+id int auto_increment primary key,
+descricao varchar(100),
+preco decimal (10,2),
+qtd_estoque int,
+for_id int,
+foreign key(for_id) references tb_fornecedores(id));
+
+create table tb_intensvendas(
+id int auto_increment primary key,
+venda_id int,
+prudoto_id int ,
+qtd int,
+subtotal decimal(10,0),
+ foreign key (venda_id) references tb_vendas(id),
+  foreign key (produto_id) references tb_podutos(id));
+  
+
+
+
+
+
+
+
+
+
+
+
+create table tb_vendas(
+id int auto_increment primary key,
+cliente_id int ,
+data_vendas datetime,
+total_vendas decimal(10,0),
+observacao text,
+foreign key (cliente_id)references tb_clientes(id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE DATABASE BDVENDAS;
+CREATE USER ' USUARIOCURSO'@'%' IDENTIFIED BY '123';
+GRANT ALL ON *.* TO' usuariocurso'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+USE BDVENDAS;
+
+CREATE TABLE TB_CLIENTE(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+CREATE TABLE TB_fornecedor(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+cnpj varchar(100),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+CREATE TABLE TB_funcionario(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+senha varchar(10),
+cargo varchar(100),
+nivel_acesso varchar(50),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+create table tb_produtos (
+id int auto_increment primary key,
+descricao varchar(100),
+preco decimal (10,2),
+qtd_estoque int,
+for_id int,
+foreign key(for_id) references tb_fornecedores(id));
+
+create table tb_intensvendas(
+id int auto_increment primary key,
+venda_id int,
+prudoto_id int ,
+qtd int,
+subtotal decimal(10,0),
+ foreign key (venda_id) references tb_vendas(id),
+  foreign key (produto_id) references tb_podutos(id));
+  
+
+
+
+
+
+
+
+
+
+
+
+create table tb_vendas(
+id int auto_increment primary key,
+cliente_id int ,
+data_vendas datetime,
+total_vendas decimal(10,0),
+observacao text,
+foreign key (cliente_id)references tb_clientes(id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE DATABASE BDVENDAS;
+CREATE USER ' USUARIOCURSO'@'%' IDENTIFIED BY '123';
+GRANT ALL ON *.* TO' usuariocurso'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+USE BDVENDAS;
+
+CREATE TABLE TB_CLIENTE(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+CREATE TABLE TB_fornecedor(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+cnpj varchar(100),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+CREATE TABLE TB_funcionario(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+senha varchar(10),
+cargo varchar(100),
+nivel_acesso varchar(50),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+create table tb_produtos (
+id int auto_increment primary key,
+descricao varchar(100),
+preco decimal (10,2),
+qtd_estoque int,
+for_id int,
+foreign key(for_id) references tb_fornecedores(id));
+
+create table tb_intensvendas(
+id int auto_increment primary key,
+venda_id int,
+prudoto_id int ,
+qtd int,
+subtotal decimal(10,0),
+ foreign key (venda_id) references tb_vendas(id),
+  foreign key (produto_id) references tb_podutos(id));
+  
+
+
+
+
+
+
+
+
+
+
+
+create table tb_vendas(
+id int auto_increment primary key,
+cliente_id int ,
+data_vendas datetime,
+total_vendas decimal(10,0),
+observacao text,
+foreign key (cliente_id)references tb_clientes(id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE DATABASE BDVENDAS;
+CREATE USER ' USUARIOCURSO'@'%' IDENTIFIED BY '123';
+GRANT ALL ON *.* TO' usuariocurso'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+USE BDVENDAS;
+
+CREATE TABLE TB_CLIENTE(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+CREATE TABLE TB_fornecedor(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+cnpj varchar(100),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+CREATE TABLE TB_funcionario(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+senha varchar(10),
+cargo varchar(100),
+nivel_acesso varchar(50),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+create table tb_produtos (
+id int auto_increment primary key,
+descricao varchar(100),
+preco decimal (10,2),
+qtd_estoque int,
+for_id int,
+foreign key(for_id) references tb_fornecedores(id));
+
+create table tb_intensvendas(
+id int auto_increment primary key,
+venda_id int,
+prudoto_id int ,
+qtd int,
+subtotal decimal(10,0),
+ foreign key (venda_id) references tb_vendas(id),
+  foreign key (produto_id) references tb_podutos(id));
+  
+
+
+
+
+
+
+
+
+
+
+
+create table tb_vendas(
+id int auto_increment primary key,
+cliente_id int ,
+data_vendas datetime,
+total_vendas decimal(10,0),
+observacao text,
+foreign key (cliente_id)references tb_clientes(id));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE DATABASE BDVENDAS;
+CREATE USER ' USUARIOCURSO'@'%' IDENTIFIED BY '123';
+GRANT ALL ON *.* TO' usuariocurso'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+USE BDVENDAS;
+
+CREATE TABLE TB_CLIENTE(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+CREATE TABLE TB_fornecedor(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+cnpj varchar(100),
+EMAIL varchar(200),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+CREATE TABLE TB_funcionario(
+ID INT auto_increment primary KEY,
+NOME varchar(100),
+RG varchar(30),
+CPF varchar(20),
+EMAIL varchar(200),
+senha varchar(10),
+cargo varchar(100),
+nivel_acesso varchar(50),
+TELEFONE varchar (30),
+CELULAR varchar (30),
+CEP varchar(100),
+ENDERECO varchar (255),
+NUMERO int,
+COMPLEMENTO varchar (200),
+bairro varchar(100),
+cidade varchar (100),
+estado varchar(2)
+);
+
+
+create table tb_produtos (
+id int auto_increment primary key,
+descricao varchar(100),
+preco decimal (10,2),
+qtd_estoque int,
+for_id int,
+foreign key(for_id) references tb_fornecedores(id));
+
+create table tb_intensvendas(
+id int auto_increment primary key,
+venda_id int,
+prudoto_id int ,
+qtd int,
+subtotal decimal(10,0),
+ foreign key (venda_id) references tb_vendas(id),
+  foreign key (produto_id) references tb_podutos(id));
+  
+
+
+
